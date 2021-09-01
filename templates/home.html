@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kanser Tespiti ve Teşhisi</title>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/tether.min.js')}}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/custom.js')}}" type="text/javascript"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/card_flips.css')}}">
+
+</head>
+
+<body>
+
+    {% include "navbar.html" %}
+
+    <div class="container mt-lg-6 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-12">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <center>
+                                <div class="card">
+                                    <img class="card-img-top"
+                                        src="{{ url_for('static', filename='assets/prognosis.jpg')}}"
+                                        alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5>Prognoz</h5>
+                                        <p class="card-text">Non-invaziv yöntemlerle hastalıkların erken teşhisi
+                                        </p>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-header">
+                                    Prognosis
+                                </div>
+                                <div class="card-body">
+
+                                    <p class="card-text">Prognoz, aşağıdakiler aracılığıyla erken tespit / risk değerlendirmesini içerir:
+                                        yaşam tarzı alışkanlıkları ve
+                                        daha basit, non-invaziv testler.</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <a href="/prognosis/breast_cancer" class="btn btn-primary btn-md">Meme kanseri</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="card-footer">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mt-lg-0 mt-2">
+                <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                    <div class="mainflip">
+                        <div class="frontside">
+                            <center>
+                                <div class="card">
+                                    <img class="card-img-top"
+                                        src="{{ url_for('static', filename='assets/diagnosis.jpg')}}"
+                                        alt="Card image cap">
+
+                                    <div class="card-body">
+                                        <h5>Teşhis</h5>
+                                        <p class="card-text">Doku örnekleriyle kanser teşhisi</p>
+                                    </div>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-header">
+                                    Teşhis
+                                </div>
+
+                                <div class="card-body">
+                                    <p>Patolojik doku örnekleri kullanılarak hastaların teşhisi</p>
+                            
+                                    <div class="row mt-2">
+                                        <div class="col-12">
+                                            <a href="/diagnosis/skin_cancer"
+                                                    class="btn btn-primary btn-md">Doku kanseri</a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="card-footer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+<script>
+  
+  var firebaseConfig = {
+    apiKey: "AIzaSyAY655S_OWVpv6jwko99jAlQ2oM6FN8vxg",
+    authDomain: "kanser-tespiti.firebaseapp.com",
+    projectId: "kanser-tespiti",
+    storageBucket: "kanser-tespiti.appspot.com",
+    messagingSenderId: "287223164651",
+    appId: "1:287223164651:web:e940c21820b7f76b3c18ae"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+</html>
